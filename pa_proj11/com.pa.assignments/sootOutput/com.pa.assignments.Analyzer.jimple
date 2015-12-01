@@ -1,0 +1,109 @@
+public class com.pa.assignments.Analyzer extends soot.BodyTransformer
+{
+    public static int method_count;
+
+    static void <clinit>()
+    {
+        int temp$0;
+
+        temp$0 = 0;
+        <com.pa.assignments.Analyzer: int method_count> = temp$0;
+        return;
+    }
+
+    protected void internalTransform1(soot.Body, java.lang.String, java.util.Map)
+    {
+        com.pa.assignments.Analyzer this;
+        soot.Body body;
+        java.lang.String arg1, temp$3, temp$4, temp$17, temp$19;
+        java.util.Map arg2;
+        soot.SootMethod sootMethod, temp$0;
+        java.io.PrintStream temp$1, temp$7, temp$15;
+        java.lang.StringBuffer temp$2, temp$16;
+        int temp$5, temp$6, temp$8;
+        soot.util.Chain localChain, temp$9;
+        java.util.Iterator it, temp$10, temp$11;
+        boolean temp$12;
+        soot.Local loc, temp$14;
+        java.lang.Object temp$13;
+        soot.Type temp$18;
+
+        this := @this: com.pa.assignments.Analyzer;
+        body := @parameter0: soot.Body;
+        arg1 := @parameter1: java.lang.String;
+        arg2 := @parameter2: java.util.Map;
+        temp$0 = virtualinvoke body.<soot.Body: soot.SootMethod getMethod()>();
+        sootMethod = temp$0;
+        temp$1 = <java.lang.System: java.io.PrintStream out>;
+        temp$2 = new java.lang.StringBuffer;
+        specialinvoke temp$2.<java.lang.StringBuffer: void <init>()>();
+        virtualinvoke temp$2.<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>("Current metod : ");
+        temp$3 = virtualinvoke sootMethod.<soot.SootMethod: java.lang.String getName()>();
+        virtualinvoke temp$2.<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>(temp$3);
+        temp$4 = virtualinvoke temp$2.<java.lang.StringBuffer: java.lang.String toString()>();
+        virtualinvoke temp$1.<java.io.PrintStream: void println(java.lang.String)>(temp$4);
+        temp$5 = <com.pa.assignments.Analyzer: int method_count>;
+        temp$6 = temp$5 + 1;
+        <com.pa.assignments.Analyzer: int method_count> = temp$6;
+        temp$7 = <java.lang.System: java.io.PrintStream out>;
+        temp$8 = <com.pa.assignments.Analyzer: int method_count>;
+        virtualinvoke temp$7.<java.io.PrintStream: void println(int)>(temp$8);
+        temp$9 = virtualinvoke body.<soot.Body: soot.util.Chain getLocals()>();
+        localChain = temp$9;
+        temp$10 = interfaceinvoke localChain.<soot.util.Chain: java.util.Iterator iterator()>();
+        temp$11 = (java.util.Iterator) temp$10;
+        it = temp$11;
+
+     label0:
+        nop;
+        temp$12 = interfaceinvoke it.<java.util.Iterator: boolean hasNext()>();
+        if temp$12 == 0 goto label2;
+
+        goto label1;
+
+     label1:
+        nop;
+        temp$13 = interfaceinvoke it.<java.util.Iterator: java.lang.Object next()>();
+        temp$14 = (soot.Local) temp$13;
+        loc = temp$14;
+        temp$15 = <java.lang.System: java.io.PrintStream out>;
+        temp$16 = new java.lang.StringBuffer;
+        specialinvoke temp$16.<java.lang.StringBuffer: void <init>()>();
+        virtualinvoke temp$16.<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>("Local name = ");
+        temp$17 = interfaceinvoke loc.<soot.Local: java.lang.String toString()>();
+        virtualinvoke temp$16.<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>(temp$17);
+        virtualinvoke temp$16.<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>(" type =                 ");
+        temp$18 = interfaceinvoke loc.<soot.Local: soot.Type getType()>();
+        virtualinvoke temp$16.<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>(temp$18);
+        temp$19 = virtualinvoke temp$16.<java.lang.StringBuffer: java.lang.String toString()>();
+        virtualinvoke temp$15.<java.io.PrintStream: void println(java.lang.String)>(temp$19);
+        goto label0;
+
+     label2:
+        nop;
+        return;
+    }
+
+    protected void internalTransform(soot.Body, java.lang.String, java.util.Map)
+    {
+        com.pa.assignments.Analyzer this;
+        soot.Body arg0;
+        java.lang.String arg1;
+        java.util.Map arg2;
+
+        this := @this: com.pa.assignments.Analyzer;
+        arg0 := @parameter0: soot.Body;
+        arg1 := @parameter1: java.lang.String;
+        arg2 := @parameter2: java.util.Map;
+        return;
+    }
+
+    public void <init>()
+    {
+        com.pa.assignments.Analyzer this;
+
+        this := @this: com.pa.assignments.Analyzer;
+        specialinvoke this.<soot.BodyTransformer: void <init>()>();
+        return;
+    }
+}

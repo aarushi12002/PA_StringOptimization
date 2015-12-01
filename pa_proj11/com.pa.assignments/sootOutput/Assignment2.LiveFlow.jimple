@@ -1,0 +1,107 @@
+public class Assignment2.LiveFlow extends java.lang.Object
+{
+
+    public static transient void main(java.lang.String[])
+    {
+        java.lang.String[] args;
+        java.lang.String x, temp$1, temp$3, temp$5, temp$7;
+        int i, j, k, temp$8, temp$9, temp$10, temp$11;
+        java.lang.StringBuffer temp$0, temp$2, temp$4, temp$6;
+
+        args := @parameter0: java.lang.String[];
+        x = "hello";
+        i = 22;
+        temp$0 = new java.lang.StringBuffer;
+        specialinvoke temp$0.<java.lang.StringBuffer: void <init>()>();
+        virtualinvoke temp$0.<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>(x);
+        virtualinvoke temp$0.<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>("world");
+        temp$1 = virtualinvoke temp$0.<java.lang.StringBuffer: java.lang.String toString()>();
+        x = temp$1;
+        j = 0;
+
+     label0:
+        nop;
+        if j < 3 goto label1;
+
+        goto label10;
+
+     label1:
+        nop;
+        if i > 15 goto label2;
+
+        goto label3;
+
+     label2:
+        nop;
+        temp$2 = new java.lang.StringBuffer;
+        specialinvoke temp$2.<java.lang.StringBuffer: void <init>()>();
+        virtualinvoke temp$2.<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>(x);
+        virtualinvoke temp$2.<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>("abc");
+        temp$3 = virtualinvoke temp$2.<java.lang.StringBuffer: java.lang.String toString()>();
+        x = temp$3;
+        goto label6;
+
+     label3:
+        nop;
+        if i < 8 goto label4;
+
+        goto label5;
+
+     label4:
+        nop;
+        temp$4 = new java.lang.StringBuffer;
+        specialinvoke temp$4.<java.lang.StringBuffer: void <init>()>();
+        virtualinvoke temp$4.<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>(x);
+        virtualinvoke temp$4.<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>("efg");
+        temp$5 = virtualinvoke temp$4.<java.lang.StringBuffer: java.lang.String toString()>();
+        x = temp$5;
+
+     label5:
+        nop;
+
+     label6:
+        nop;
+        k = 0;
+
+     label7:
+        nop;
+        if k < 2 goto label8;
+
+        goto label9;
+
+     label8:
+        nop;
+        temp$6 = new java.lang.StringBuffer;
+        specialinvoke temp$6.<java.lang.StringBuffer: void <init>()>();
+        virtualinvoke temp$6.<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>(x);
+        virtualinvoke temp$6.<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>("xyz");
+        temp$7 = virtualinvoke temp$6.<java.lang.StringBuffer: java.lang.String toString()>();
+        x = temp$7;
+        nop;
+        temp$8 = k;
+        temp$9 = temp$8 + 1;
+        k = temp$9;
+        goto label7;
+
+     label9:
+        nop;
+        nop;
+        temp$10 = j;
+        temp$11 = temp$10 + 1;
+        j = temp$11;
+        goto label0;
+
+     label10:
+        nop;
+        return;
+    }
+
+    public void <init>()
+    {
+        Assignment2.LiveFlow this;
+
+        this := @this: Assignment2.LiveFlow;
+        specialinvoke this.<java.lang.Object: void <init>()>();
+        return;
+    }
+}

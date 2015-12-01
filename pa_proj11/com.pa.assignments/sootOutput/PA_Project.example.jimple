@@ -1,0 +1,95 @@
+public class PA_Project.example extends java.lang.Object
+{
+
+    public static transient void main(java.lang.String[])
+    {
+        java.lang.String[] args;
+        java.lang.String x, temp$1, temp$3, temp$5, temp$7, y, temp$11;
+        int i, j, temp$8, temp$9;
+        java.lang.StringBuffer temp$0, temp$2, temp$4, temp$6, temp$10;
+
+        args := @parameter0: java.lang.String[];
+        x = "aaru";
+        i = 0;
+        temp$0 = new java.lang.StringBuffer;
+        specialinvoke temp$0.<java.lang.StringBuffer: void <init>()>();
+        virtualinvoke temp$0.<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>(x);
+        virtualinvoke temp$0.<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>("genius");
+        temp$1 = virtualinvoke temp$0.<java.lang.StringBuffer: java.lang.String toString()>();
+        x = temp$1;
+        j = 0;
+
+     label0:
+        nop;
+        if j < 9 goto label1;
+
+        goto label7;
+
+     label1:
+        nop;
+        if i > 7 goto label2;
+
+        goto label3;
+
+     label2:
+        nop;
+        temp$2 = new java.lang.StringBuffer;
+        specialinvoke temp$2.<java.lang.StringBuffer: void <init>()>();
+        virtualinvoke temp$2.<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>(x);
+        virtualinvoke temp$2.<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>("oooo");
+        temp$3 = virtualinvoke temp$2.<java.lang.StringBuffer: java.lang.String toString()>();
+        x = temp$3;
+        goto label6;
+
+     label3:
+        nop;
+        if i <= 6 goto label4;
+
+        goto label5;
+
+     label4:
+        nop;
+        temp$4 = new java.lang.StringBuffer;
+        specialinvoke temp$4.<java.lang.StringBuffer: void <init>()>();
+        virtualinvoke temp$4.<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>(x);
+        virtualinvoke temp$4.<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>("oooo");
+        temp$5 = virtualinvoke temp$4.<java.lang.StringBuffer: java.lang.String toString()>();
+        x = temp$5;
+
+     label5:
+        nop;
+
+     label6:
+        nop;
+        temp$6 = new java.lang.StringBuffer;
+        specialinvoke temp$6.<java.lang.StringBuffer: void <init>()>();
+        virtualinvoke temp$6.<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>(x);
+        virtualinvoke temp$6.<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>("some");
+        temp$7 = virtualinvoke temp$6.<java.lang.StringBuffer: java.lang.String toString()>();
+        x = temp$7;
+        nop;
+        temp$8 = j;
+        temp$9 = temp$8 + 1;
+        j = temp$9;
+        goto label0;
+
+     label7:
+        nop;
+        temp$10 = new java.lang.StringBuffer;
+        specialinvoke temp$10.<java.lang.StringBuffer: void <init>()>();
+        virtualinvoke temp$10.<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>(x);
+        virtualinvoke temp$10.<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>("some");
+        temp$11 = virtualinvoke temp$10.<java.lang.StringBuffer: java.lang.String toString()>();
+        y = temp$11;
+        return;
+    }
+
+    public void <init>()
+    {
+        PA_Project.example this;
+
+        this := @this: PA_Project.example;
+        specialinvoke this.<java.lang.Object: void <init>()>();
+        return;
+    }
+}

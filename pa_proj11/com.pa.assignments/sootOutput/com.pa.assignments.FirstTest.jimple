@@ -1,0 +1,84 @@
+public class com.pa.assignments.FirstTest extends java.lang.Object
+{
+    int a;
+    java.lang.String b;
+
+    public void <init>(int)
+    {
+        com.pa.assignments.FirstTest this;
+        int a;
+
+        this := @this: com.pa.assignments.FirstTest;
+        a := @parameter0: int;
+        specialinvoke this.<java.lang.Object: void <init>()>();
+        this.<com.pa.assignments.FirstTest: int a> = a;
+        return;
+    }
+
+    public void <init>(int, java.lang.String)
+    {
+        com.pa.assignments.FirstTest this;
+        int a;
+        java.lang.String b;
+
+        this := @this: com.pa.assignments.FirstTest;
+        a := @parameter0: int;
+        b := @parameter1: java.lang.String;
+        specialinvoke this.<java.lang.Object: void <init>()>();
+        this.<com.pa.assignments.FirstTest: int a> = a;
+        this.<com.pa.assignments.FirstTest: java.lang.String b> = b;
+        return;
+    }
+
+    public int foo(int)
+    {
+        com.pa.assignments.FirstTest this;
+        int a;
+        java.io.PrintStream $r0;
+
+        this := @this: com.pa.assignments.FirstTest;
+        a := @parameter0: int;
+        $r0 = <java.lang.System: java.io.PrintStream out>;
+        virtualinvoke $r0.<java.io.PrintStream: void println(java.lang.String)>("In foo()");
+        return a;
+    }
+
+    public void bar()
+    {
+        com.pa.assignments.FirstTest this;
+        java.io.PrintStream $r0;
+
+        this := @this: com.pa.assignments.FirstTest;
+        $r0 = <java.lang.System: java.io.PrintStream out>;
+        virtualinvoke $r0.<java.io.PrintStream: void println(java.lang.String)>("in bar()");
+        return;
+    }
+
+    public static void main(java.lang.String[])
+    {
+        java.lang.String[] ar;
+        java.lang.Integer x, y;
+        com.pa.assignments.FirstTest first, $r0;
+        int $i0;
+        java.io.PrintStream $r1;
+        java.lang.StringBuilder $r2;
+        java.lang.String $r3;
+
+        ar := @parameter0: java.lang.String[];
+        x = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>(10);
+        $i0 = virtualinvoke x.<java.lang.Integer: int intValue()>();
+        $i0 = $i0 + 2;
+        y = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>($i0);
+        $r0 = new com.pa.assignments.FirstTest;
+        specialinvoke $r0.<com.pa.assignments.FirstTest: void <init>(int)>(6);
+        first = $r0;
+        virtualinvoke first.<com.pa.assignments.FirstTest: void bar()>();
+        $r1 = <java.lang.System: java.io.PrintStream out>;
+        $r2 = new java.lang.StringBuilder;
+        specialinvoke $r2.<java.lang.StringBuilder: void <init>(java.lang.String)>("First test in SOOT ");
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>(y);
+        $r3 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.String toString()>();
+        virtualinvoke $r1.<java.io.PrintStream: void println(java.lang.String)>($r3);
+        return;
+    }
+}
